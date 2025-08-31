@@ -20,7 +20,6 @@ export class MemoryLeak implements OnInit {
       console.log('called when observable is unsubscribed');
       clearInterval(interval);
     }
-
   })
   timerSubscription!: Subscription;
   timerSubscription2!: Subscription;
