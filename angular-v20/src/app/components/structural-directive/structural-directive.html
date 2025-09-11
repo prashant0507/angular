@@ -1,0 +1,34 @@
+<h1>structural-directive works!</h1>
+<h2>@IF - @ELSE IF - @ELSE</h2>
+@if(age > 18) {
+    <h3>You Can vote</h3>
+} @else if(18 > age) {
+    <h3>You can't vote</h3>
+} @else {
+    <h3>You are equal to 18</h3>
+}
+
+<h2>@FOR - @EMPTY</h2>
+@for(user of users; track user.id; let idx = $index, e = $odd) {
+    {{idx}} - {{e}} - {{user.name}} <br/>
+} @empty { 
+    <h3>THIS SECTION WILL PRINT IF ARRAY IS EMPTY</h3>
+}
+<br/>
+$last  => last item will be true <br/>
+$first => first item will be true <br/>
+$even  => all even record will be true and odd will be false <br/>
+$odd   => all even record will be false and odd will be true <br/>
+
+<h2>@SWITCH</h2>
+@switch(userPermission) {
+    @case('admin') {
+        User role admin <!-- You can use componenet selector also  -->
+    }
+    @case('guest') {
+        User role guest <!-- You can use componenet selector also  -->
+    }
+    @default {
+        User role default <!-- You can use componenet selector also  -->
+    }
+}
