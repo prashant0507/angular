@@ -9,7 +9,7 @@
 }
 
 <h2>@FOR - @EMPTY</h2>
-@for(user of users; track user.id; let idx = $index, e = $odd) {
+@for (user of users; track user.id; let idx = $index, e = $odd) {
     {{idx}} - {{e}} - {{user.name}} <br/>
 } @empty { 
     <h3>THIS SECTION WILL PRINT IF ARRAY IS EMPTY</h3>
