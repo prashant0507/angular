@@ -1,1 +1,18 @@
-<p>login works!</p>
+<form [formGroup]="login" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email" (blur)="updateErrorMessage()" />
+        @if (login.get('email')?.invalid) {
+        <mat-error>{{errorMessage()}}</mat-error>
+        }
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+        <mat-label>Enter your email</mat-label>
+        <input matInput type="password" formControlName="password" />
+    </mat-form-field>
+
+    <div class="example-button-row">
+        <button type="submit" matButton="filled" [disabled]="!login.valid">Submit</button>
+    </div>
+</form>
