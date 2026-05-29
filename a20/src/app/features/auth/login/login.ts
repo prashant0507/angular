@@ -32,9 +32,9 @@ export class Login implements OnInit {
   }
 
   updateErrorMessage() {
-    if (this.login?.get('email')?.hasError('required')) {
+    if (this.login.get('email')?.hasError('required')) {
       this.errorMessage.set('You must enter a value');
-    } else if (this.login?.get('email')?.hasError('email')) {
+    } else if (this.login.get('email')?.hasError('email')) {
       this.errorMessage.set('Not a valid email');
     } else {
       this.errorMessage.set('');
