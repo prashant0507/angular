@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { RouterLink } from '@angular/router';
+import { CanComponentDeactivate } from '../../../core/guards/unsaved-guard';
 
 @Component({
   selector: 'app-signup',
@@ -24,7 +25,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './signup.html',
   styleUrl: './signup.scss',
 })
-export class Signup implements OnInit{
+export class Signup implements OnInit, CanComponentDeactivate{
   private formBuilder = inject(FormBuilder);
   signup!: FormGroup;
   hobbies = ['Tennis', 'Cricket', 'Football']
@@ -48,4 +49,14 @@ export class Signup implements OnInit{
     console.log(this.signup.value);
   }
 
+  isDirty(): boolean {
+    return this.signup.dirty;
+  }
+
+  canDeactivate(): boolean {
+    if (this.isDirty()) {
+      return confirm('You have unsaved changes. Do you want to leave?');
+    }
+    return true;
+  }
 }

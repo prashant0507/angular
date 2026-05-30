@@ -129,3 +129,15 @@ src/
 ├── main.ts
 ├── styles.scss                          # Global styles
 └── index.html
+
+
+
+# Guard
+# Interceptor
+# Reactive Form
+# Resolver
+# Signal
+# Standalone Component
+# Routing
+# User Detail
+# User Edit Detail
