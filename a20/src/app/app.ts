@@ -1,6 +1,7 @@
 import { Component, inject, Inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './shared/components/header/header';
+import { Loader } from './shared/components/loader/loader';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { Header } from './shared/components/header/header';
   imports: [
     RouterOutlet,
     Header,
+    Loader
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

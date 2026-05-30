@@ -37,13 +37,10 @@ export class Login implements OnInit, OnDestroy {
   }
 
   onSubmit(){
-    console.log('logon value',this.login.value);
     this.auth.login(this.login.value.email, this.login.value.password).pipe(
       takeUntil(this.destroy$)
     ).subscribe((data: boolean) => {
-      console.log('data', data);
       if(data) {
-        console.log('sss', this.router.navigate(['/user']))
         this.router.navigate(['/user']);
       }
     });

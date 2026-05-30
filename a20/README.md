@@ -132,12 +132,13 @@ src/
 
 
 
-# Guard
-# Interceptor
-# Reactive Form
+# Guard => Done
+# Interceptor => Done
+# Reactive Form => Done
 # Resolver
-# Signal
-# Standalone Component
-# Routing
+# Signal => Signal
+# Standalone Component => Done
+# Routing => Done
 # User Detail
 # User Edit Detail
+# Store
