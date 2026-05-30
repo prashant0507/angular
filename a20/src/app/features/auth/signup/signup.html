@@ -1,1 +1,67 @@
-<p>signup works!</p>
+<form [formGroup]="signup" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <mat-label>Enter your First Name</mat-label>
+        <input matInput formControlName="fname" />
+    </mat-form-field>
+
+    <br/>
+
+    <mat-form-field>
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email" />
+    </mat-form-field>
+
+    <br/>
+
+    <mat-form-field>
+        <mat-label>Enter your Password</mat-label>
+        <input matInput type="password" formControlName="password" />
+    </mat-form-field>
+
+    <br/>
+
+    <div formArrayName="hobbies">
+        @for (hobby of hobbiesSignupArray.controls; track hobby; let i = $index) {
+            <mat-checkbox [formControlName]="i">
+                {{hobbies[i]}}
+            </mat-checkbox>
+        }
+    </div>
+
+    <br/>
+
+    <div>
+      <label>Float label: </label>
+      <mat-radio-group formControlName="gender">
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <br/>
+    <!-- WAY 1 -->
+    <!-- <mat-form-field appearance="fill">
+        <mat-label>Hobbies</mat-label>
+        <mat-select formControlName="countries">
+        @for (country of countries; track country; let i = $index) {
+            <mat-option [value]="countries[i]">{{ countries[i] }}</mat-option>
+        }
+        </mat-select>
+    </mat-form-field> -->
+
+    <!-- WAY 2 -->
+    <mat-form-field appearance="fill">
+        <mat-label>Hobbies</mat-label>
+        <mat-select formControlName="countries">
+        @for (country of countries; track country; let i = $index) {
+            <mat-option [value]="country">{{ country }}</mat-option>
+        }
+        </mat-select>
+    </mat-form-field>
+
+    <div class="example-button-row">
+        <button type="submit" matButton="filled" [disabled]="!signup.valid">Submit</button>
+    </div>
+
+    <a routerLink="../login">Login</a>
+</form>
