@@ -16,18 +16,13 @@ export class Auth {
   private apiUrl = 'https://fake-json-api.mock.beeceptor.com/users';
 
   login(username: string, password: string): Observable<boolean> {
-    return this.http.get(this.apiUrl).pipe(
-      map(() => {
-        if(username == 'admin@gmail.com' && password == 'admin') {
-          this.token.set('mock-token');
-          return true;
-        }
-        return true;
-      }),
-      catchError((error) => {
-        return of(false);
-      })
-    );
+    // TODO:- Need to implemets actual API here
+    if(username == 'admin@gmail.com' && password == 'admin') {
+      this.token.set('mock-token');
+      console.log('show token', this.token());
+      return of(true);
+    }
+    return of(false);
   }
 
   // const name = "Alice";

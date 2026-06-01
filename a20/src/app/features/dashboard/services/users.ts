@@ -1,0 +1,18 @@
+import { HttpClient } from '@angular/common/http';
+import { inject, Injectable } from '@angular/core';
+import { catchError, Observable, throwError } from 'rxjs';
+import { User } from '../models/user.interface';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class UsersAPI {
+  private http = inject(HttpClient);
+  private apiUrl = 'https://fake-json-api.mock.beeceptor.com/users';
+
+  all(): Observable<User[]> {
+    return this.http.get<User[]>(this.apiUrl).pipe(
+      catchError((error) => throwError(() => error))
+    );
+  }
+}
