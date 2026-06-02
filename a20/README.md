@@ -87,7 +87,13 @@ ng add @ngrx/store-devtools --save
 (Note : logOnly: !isDevMode(), // Restrict extension to log-only mode)
 
 ng add @ngrx/schematics --save
-(Note: Configure the Schematics so that NgRx commands are available in Angular CLI by default)
+(Note: Configure the Schematics so that NgRx commands are available in Angular CLI by default, so you can create actions, reducers etc by command)
+(Example 
+    ng generate action ACTION_NAME || ng g action ACTION_NAME
+    ng generate reducer REDUCER_NAME || ng g reducer REDUCER_NAME 
+    ng generate selector SELECTOR_NAME || ng g selector SELECTOR_NAME
+    ng generate effect EFFECT_NAME || ng g effect EFFECT_NAME
+)
 (Note: It will update code in angular.json)
 "cli": {
     "schematicCollections": [
