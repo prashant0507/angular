@@ -61,24 +61,17 @@ For more information on using the Angular CLI, including detailed command refere
 ## Topic that we need to cover
 ```bash
 Guard (CanActivate, CanDeactivate, Resolver)=> Done
+Resolver With Service (Without Store) => Done
+Resolver with Store => Pending
 Interceptor => Done
 Reactive Form => Done
 Signal => Done
 Standalone Component => Done
 Routing => Done
-Navigate to User Detail
-Navigate to User Edit Detail
-Store
-
+Navigate to User Detail => Pending
+Navigate to User Edit Detail => Pending
+Store => Pending
 ```
-# Guard (CanActivate, CanDeactivate, Resolver)=> Done
-# Interceptor => Done
-# Reactive Form => Done
-# Signal => Done
-# Standalone Component => Done
-# Routing => Done
-# Navigate to User Detail
-# Navigate to User Edit Detail
 
 ## Store
 ```bash
@@ -86,6 +79,7 @@ ng add @ngrx/store
 ```
 
 ## Structure
+```bash
 src/
 ├── app/
 │   ├── core/                           # Singleton services, guards, interceptors
@@ -156,3 +150,4 @@ src/
 ├── main.ts
 ├── styles.scss                          # Global styles
 └── index.html
+```
