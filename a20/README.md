@@ -75,7 +75,25 @@ Store => Pending
 
 ## Store
 ```bash
-ng add @ngrx/store
+ng add @ngrx/store --save
+(Note : will add provideStore() in app.config.ts) 
+
+ng add @ngrx/effects --save
+(Note : will add provideEffects() in app.config.ts)
+
+ng add @ngrx/store-devtools --save
+(Note : will add provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }) in app.config.ts)
+(Note : maxAge: 25, // Retains last 25 states)
+(Note : logOnly: !isDevMode(), // Restrict extension to log-only mode)
+
+ng add @ngrx/schematics --save
+(Note: Configure the Schematics so that NgRx commands are available in Angular CLI by default)
+(Note: It will update code in angular.json)
+"cli": {
+    "schematicCollections": [
+      "@ngrx/schematics"
+    ]
+}
 ```
 
 ## Structure
