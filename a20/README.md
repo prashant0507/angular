@@ -58,7 +58,34 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
-# Structure
+## Topic that we need to cover
+```bash
+Guard (CanActivate, CanDeactivate, Resolver)=> Done
+Interceptor => Done
+Reactive Form => Done
+Signal => Done
+Standalone Component => Done
+Routing => Done
+Navigate to User Detail
+Navigate to User Edit Detail
+Store
+
+```
+# Guard (CanActivate, CanDeactivate, Resolver)=> Done
+# Interceptor => Done
+# Reactive Form => Done
+# Signal => Done
+# Standalone Component => Done
+# Routing => Done
+# Navigate to User Detail
+# Navigate to User Edit Detail
+
+## Store
+```bash
+ng add @ngrx/store
+```
+
+## Structure
 src/
 ├── app/
 │   ├── core/                           # Singleton services, guards, interceptors
@@ -129,16 +156,3 @@ src/
 ├── main.ts
 ├── styles.scss                          # Global styles
 └── index.html
-
-
-
-# Guard => Done
-# Interceptor => Done
-# Reactive Form => Done
-# Resolver
-# Signal => Signal
-# Standalone Component => Done
-# Routing => Done
-# User Detail
-# User Edit Detail
-# Store
