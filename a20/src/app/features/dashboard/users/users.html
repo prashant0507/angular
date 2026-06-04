@@ -1,5 +1,39 @@
+<h2>LIST WITH SIGNAL AND RESOLVER</h2>
 <ul>
   @for (user of usersList(); track user.id) {
+    <li>
+      {{ user.name }} - {{user.email}} 
+    </li>
+  } @empty {
+    <li>No products found in the database.</li>
+  }
+</ul>
+
+<h2>LIST WITH STORE - FETCH ALL USERS</h2>
+<ul>
+  @for (user of (userListWithStore$ | async); track user.id) {
+    <li>
+      {{ user.name }} - {{user.email}} 
+    </li>
+  } @empty {
+    <li>No products found in the database.</li>
+  }
+</ul>
+
+<h2>LIST WITH STORE - FETCH SPECIFIC USER BY ID</h2>
+<ul>
+  @for (user of (userListWithStoreFilterById$ | async); track user.id) {
+    <li>
+      {{ user.name }} - {{user.email}} 
+    </li>
+  } @empty {
+    <li>No products found in the database.</li>
+  }
+</ul>
+
+<h2>LIST WITH STORE AND SIGNAL - FETCH ALL USERS</h2>
+<ul>
+  @for (user of usersListBySelectorUsingSignal(); track user.id) {
     <li>
       {{ user.name }} - {{user.email}} 
     </li>

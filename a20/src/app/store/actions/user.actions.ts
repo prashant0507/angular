@@ -1,10 +1,11 @@
 import { createActionGroup, emptyProps, props } from '@ngrx/store';
+import { User } from '../../features/dashboard/models/user.interface';
 
 export const UserActions = createActionGroup({
   source: 'User',
   events: {
     'Load Users': emptyProps(),
-    'Load Users Success': props<{ data: unknown }>(),
-    'Load Users Failure': props<{ error: unknown }>(),
+    'Load Users Success': props<{ data: User[] }>(),
+    'Load Users Failure': props<{ error: string }>(),
   }
 });

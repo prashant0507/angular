@@ -85,10 +85,13 @@ src/
 │   │   └── settings/
 │   │       └── ... (similar structure)
 │   │
+│   ├── layout/
+│   │   ├── header/
+│   │   ├── footer/
+│   │   ├── sidebar/
+│   │
 │   ├── shared/                          # Shared components & utilities
 │   │   ├── components/
-│   │   │   ├── header/
-│   │   │   ├── sidebar/
 │   │   │   ├── loading-spinner/
 │   │   │   └── modal/
 │   │   ├── directives/

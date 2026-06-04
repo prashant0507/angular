@@ -7,6 +7,8 @@ import { loadingInterceptor } from './core/interceptors/loading-interceptor';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
+import { userReducer } from './store/reducers/user.reducer';
+import { UserEffects } from './store/effects/user.effects';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -14,8 +16,10 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(withInterceptors([loadingInterceptor])),
-    provideStore(),
-    provideEffects(),
+    provideStore({
+      user: userReducer
+    }),
+    provideEffects(UserEffects),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })
-]
+  ]
 };
