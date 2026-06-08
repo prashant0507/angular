@@ -46,12 +46,12 @@ export class Users implements OnInit{
   }
 
   viewDetail(id: number) {
-    this.router.navigate(['user/', id]);
+    this.router.navigate(['user/detail', id]);
     //this.router.navigateByUrl(`/user/${id}`);
   }
 
   onEdit(id: number) {
-
+    this.router.navigate(['user/edit', id]);
   }
 
   onDelete(id: number) {

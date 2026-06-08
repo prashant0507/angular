@@ -16,11 +16,11 @@ export const DASHBOARD_ROUTES: Routes = [
         component: Users
     },
     {
-        path: ':id',
+        path: 'detail/:id',
         component: Detail
     },
     {
-        path: 'edit',
+        path: 'edit/:id',
         component: Edit
     }
 ]
