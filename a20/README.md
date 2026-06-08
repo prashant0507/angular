@@ -12,9 +12,10 @@ Reactive Form => Done
 Signal => Done
 Standalone Component => Done
 Routing => Done
+Navigate to User List => Done
 Navigate to User Detail => Pending
 Navigate to User Edit Detail => Pending
-Store => Pending
+Store => Done
 ```
 
 ## Store
@@ -59,6 +60,8 @@ src/
 │   │   ├── guards/
 │   │   │   ├── auth.guard.ts
 │   │   │   └── permission.guard.ts
+│   │   ├── interceptors/
+│   │   │   └── loading-interceptor.ts
 │   │   └── core.config.ts               # Core providers
 │   │
 │   ├── features/                        # Feature modules
@@ -89,6 +92,12 @@ src/
 │   │   ├── header/
 │   │   ├── footer/
 │   │   ├── sidebar/
+│   │
+│   ├── store/
+│   │   ├── actions/
+│   │   ├── effects/
+│   │   ├── reducers/
+│   │   ├── selectors/
 │   │
 │   ├── shared/                          # Shared components & utilities
 │   │   ├── components/

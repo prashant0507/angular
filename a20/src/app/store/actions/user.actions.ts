@@ -7,5 +7,9 @@ export const UserActions = createActionGroup({
     'Load Users': emptyProps(),
     'Load Users Success': props<{ data: User[] }>(),
     'Load Users Failure': props<{ error: string }>(),
+
+    'Load Detal Users': props<{ id: number }>(),
+    'Load Detail Users Success': props<{ data: User }>(),
+    'Load Detail Users Failure': props<{ error: string }>(),
   }
 });

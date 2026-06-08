@@ -22,4 +22,16 @@ export class UserEffects {
     )
     )
   })
+
+  loadDetailUsers$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(UserActions.loadDetalUsers),
+      exhaustMap(({id}) => this.usersAPI.byId(id)
+      .pipe(
+        map((user: User) => (UserActions.loadDetailUsersSuccess({data: user}))),
+        catchError(() => of(UserActions.loadDetailUsersFailure({error: 'somwthing went wrong with user detail api call'})))
+      )
+    )
+    )
+  })
 }

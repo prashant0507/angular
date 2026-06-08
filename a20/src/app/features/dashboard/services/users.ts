@@ -15,4 +15,10 @@ export class UsersAPI {
       catchError((error) => throwError(() => error))
     );
   }
+
+  byId(id: number): Observable<User> {
+    return this.http.get<User>(`${this.apiUrl}/${id}`).pipe(
+      catchError((error) => throwError(() => error))
+    );
+  }
 }

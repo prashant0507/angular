@@ -16,7 +16,7 @@ export const DASHBOARD_ROUTES: Routes = [
         component: Users
     },
     {
-        path: 'detail',
+        path: ':id',
         component: Detail
     },
     {

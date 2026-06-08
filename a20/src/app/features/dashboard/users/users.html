@@ -1,25 +1,40 @@
-<h2>LIST WITH SIGNAL AND RESOLVER</h2>
-<ul>
+<!-- <h2>LIST WITH SIGNAL AND RESOLVER</h2>
+<table>
   @for (user of usersList(); track user.id) {
-    <li>
-      {{ user.name }} - {{user.email}} 
-    </li>
+    <tr>
+      <td>{{ user.name }}</td>  
+      <td>{{user.email}}</td>
+      <td>
+        <button (click)="viewDetail(user.id)">View</button>
+        <button (click)="onEdit(user.id)">Edit</button>
+        <button (click)="onDelete(user.id)">Delete</button>
+      </td> 
+    </tr>
   } @empty {
     <li>No products found in the database.</li>
   }
-</ul>
+</table> -->
 
-<h2>LIST WITH STORE - FETCH ALL USERS</h2>
-<ul>
+<!-- BELOW CODE IF YOU NEED DATA BY STORE -->
+
+ <h2>LIST WITH STORE - FETCH ALL USERS</h2>
+<table>
   @for (user of (userListWithStore$ | async); track user.id) {
-    <li>
-      {{ user.name }} - {{user.email}} 
-    </li>
+    <tr>
+      <td>{{ user.name }}</td>  
+      <td>{{ user.email }}</td>
+      <td>
+        <button (click)="viewDetail(user.id)">View</button>
+        <button (click)="onEdit(user.id)">Edit</button>
+        <button (click)="onDelete(user.id)">Delete</button>
+      </td> 
+    </tr>
   } @empty {
     <li>No products found in the database.</li>
   }
-</ul>
+</table>
 
+<!--
 <h2>LIST WITH STORE - FETCH SPECIFIC USER BY ID</h2>
 <ul>
   @for (user of (userListWithStoreFilterById$ | async); track user.id) {
@@ -40,4 +55,4 @@
   } @empty {
     <li>No products found in the database.</li>
   }
-</ul>
+</ul> -->

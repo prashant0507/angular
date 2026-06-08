@@ -5,22 +5,37 @@ import { User } from '../../features/dashboard/models/user.interface';
 export const userFeatureKey = 'user';
 
 export interface State {
-
+  list: User[],
+  detail: User | null
 }
 
-export const initialState: User[] = [];
+export const initialState: State = {
+  list: [],
+  detail: null,
+};
 
 export const userReducer = createReducer(
   initialState,
 
-  on(UserActions.loadUsersSuccess, (state: User[], action: any) => {
-    console.log('reducers state', state),
-    console.log('reducers action', action)
-    return action.data;
+  on(UserActions.loadUsersSuccess, (state: State, action: { data: User[] }) => {
+    return {
+      ...state,
+      list: action.data
+    } as State;
   }),
 
-  on(UserActions.loadUsersFailure, (state: User[], action: any) => {
-    return [];
+  on(UserActions.loadDetailUsersSuccess, (state: State, action: { data: User }) => {
+    return {
+      ...state,
+      detail: action.data
+    } as State;
+  }),
+
+  on(UserActions.loadUsersFailure, (state: State, action: any) => {
+    return {
+      ...state,
+      list: []
+    } as State;
   })
 );
 
