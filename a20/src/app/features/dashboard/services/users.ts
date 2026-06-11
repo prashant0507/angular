@@ -8,7 +8,7 @@ import { User } from '../models/user.interface';
 })
 export class UsersAPI {
   private http = inject(HttpClient);
-  private apiUrl = 'https://fake-json-api.mock.beeceptor.com/users';
+  private apiUrl = '/api/users.json';
 
   all(): Observable<User[]> {
     return this.http.get<User[]>(this.apiUrl).pipe(

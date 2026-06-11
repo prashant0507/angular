@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "Prashant",
+    "company": "Dickinson LLC",
+    "username": "Titus.Torp77",
+    "email": "Corine10@hotmail.com",
+    "address": "151 Candelario Corners",
+    "zip": "44013",
+    "state": "Montana",
+    "country": "Cook Islands",
+    "phone": "585.752.0301",
+    "photo": "https://json-server.dev/ai-profiles/65.png",
+    "gender": "m",
+    "city": "gwalior",
+    "hobbies": ["dance", "sing"]
+  }, 
+  {
+    "id": 2,
+    "name": "Harshita",
+    "company": "Jacobs, Kihn and Wolff",
+    "username": "Candido.Yundt",
+    "email": "Lincoln_Rohan8@hotmail.com",
+    "address": "507 Conroy Station",
+    "zip": "41817-4101",
+    "state": "Michigan",
+    "country": "Eritrea",
+    "phone": "1-653-452-4673 x3436",
+    "photo": "https://json-server.dev/ai-profiles/95.png",
+    "gender": "f",
+    "city": "agra",
+    "hobbies": ["acting", "tennis"]
+
+  }, 
+  {
+    "id": 3,
+    "name": "Pankaj",
+    "company": "McDermott LLC",
+    "username": "Cleveland.Medhurst74",
+    "email": "Gideon.Reichel29@yahoo.com",
+    "address": "19818 Hessel Streets",
+    "zip": "72224",
+    "state": "Tennessee",
+    "country": "Brazil",
+    "phone": "(702) 342-0072 x6347",
+    "photo": "https://json-server.dev/ai-profiles/5.png",
+    "gender": "m",
+    "city": "delhi",
+    "hobbies": ["badminton", "harmonium"]
+  }, 
+  {
+    "id": 4,
+    "name": "Viplav",
+    "company": "Schneider - Bauch",
+    "username": "Dulce_Goodwin81",
+    "email": "Hertha.Kuhic@hotmail.com",
+    "address": "22901 10th Street",
+    "zip": "37416-6731",
+    "state": "Hawaii",
+    "country": "Iceland",
+    "phone": "572.709.5598 x5695",
+    "photo": "https://json-server.dev/ai-profiles/24.png",
+    "gender": "m",
+    "city": "gujrat",
+    "hobbies": ["swiming", "shooting"]
+  }
+]  

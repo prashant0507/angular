@@ -6,16 +6,16 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 ```bash
 Guard (CanActivate, CanDeactivate, Resolver)=> Done
 Resolver With Service (Without Store) => Done
-Resolver with Store => Pending
 Interceptor => Done
 Reactive Form => Done
 Signal => Done
 Standalone Component => Done
 Routing => Done
 Navigate to User List => Done
-Navigate to User Detail => Pending
+Navigate to User Detail => Done
 Navigate to User Edit Detail => Pending
 Store => Done
+JSON File as a service => Pending
 ```
 
 ## Store
