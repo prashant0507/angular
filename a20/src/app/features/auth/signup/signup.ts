@@ -36,7 +36,7 @@ export class Signup implements OnInit, CanComponentDeactivate{
       email:[''],
       password:[''],
       gender: [''],
-      countries: [''],
+      country: [''],
       hobbies: this.formBuilder.array(this.hobbies.map(() => false))
     })
   }

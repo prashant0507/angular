@@ -1,1 +1,35 @@
-<p>edit works!</p>
+<form [formGroup]="editForm">
+    <mat-form-field>
+        <mat-label>Enter your First Name</mat-label>
+        <input matInput formControlName="name" />
+    </mat-form-field>
+
+    <br />
+
+    <mat-form-field>
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" formControlName="email" />
+    </mat-form-field>
+
+    <br />
+
+    <div>
+      <label>Float label: </label>
+      <mat-radio-group formControlName="gender">
+        <mat-radio-button value="m">Male</mat-radio-button>
+        <mat-radio-button value="f">Female</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <br />
+
+    <mat-form-field appearance="fill">
+        <mat-label>Countries</mat-label>
+        <mat-select formControlName="countries">
+        @for (country of allCountries; track country; let i = $index) {
+            <mat-option [value]="country">{{ country }}</mat-option>
+        }
+        </mat-select>
+    </mat-form-field>
+
+</form>

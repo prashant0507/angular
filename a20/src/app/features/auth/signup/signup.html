@@ -51,8 +51,8 @@
 
     <!-- WAY 2 -->
     <mat-form-field appearance="fill">
-        <mat-label>Hobbies</mat-label>
-        <mat-select formControlName="countries">
+        <mat-label>Countries</mat-label>
+        <mat-select formControlName="country">
         @for (country of countries; track country; let i = $index) {
             <mat-option [value]="country">{{ country }}</mat-option>
         }

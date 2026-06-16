@@ -3,6 +3,8 @@ export interface User {
     name: string,
     email: string,
     company: string,
+    gender?: string,
+    country?: string,
 }
 
 
