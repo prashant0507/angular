@@ -5,6 +5,7 @@ export interface User {
     company: string,
     gender?: string,
     country?: string,
+    hobbies?: [],
 }
 
 
