@@ -34,4 +34,12 @@ export class UserEffects {
     )
     )
   })
+
+  deleteUser$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(UserActions.deleteUser),
+      map(({ id }) => UserActions.deleteUserSuccess({ id })),
+      catchError(() => of(UserActions.deleteUserFailure({ error: 'somwthing went wrong with user delete api call' })))
+    )
+  })
 }

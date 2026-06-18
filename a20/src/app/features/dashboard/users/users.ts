@@ -55,6 +55,12 @@ export class Users implements OnInit{
   }
 
   onDelete(id: number) {
-    
+    const isConfirmed = confirm('Are you sure you want to delete this user?');
+
+    if (!isConfirmed) {
+      return;
+    }
+
+    this.store.dispatch(UserActions.deleteUser({ id }));
   }
 }
