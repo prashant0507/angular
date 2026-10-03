@@ -8,7 +8,7 @@ import { RouterOutlet } from '@angular/router';
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class App {
-  name = 'Prashant';
+  name = 'John Doe';
   city = 'Bangalore';
   message = '';
 
